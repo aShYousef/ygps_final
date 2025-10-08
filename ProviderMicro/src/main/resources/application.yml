@@ -1,0 +1,33 @@
+server:
+  port: 9001
+
+spring:
+  application:
+    name: provider-service
+    
+  jpa:
+    hibernate:
+      # This is the line you need to add or change
+      ddl-auto: update
+    # It's also helpful to see the SQL commands Hibernate is running
+    show-sql: true
+  datasource:
+    url: jdbc:mysql://localhost:3306/providerdb
+    username: root
+    password:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+#    spring:
+#      datasource:
+#        driver-class-name: com.mysql.cj.jdbc.Driver
+#        url: jdbc:mysql://localhost:3306/providerdb?serverTimezone=UTC
+#        username: root
+#        password:
+#      jpa:
+#        hibernate:
+#          ddl-auto: update
+#        show-sql: true
+#        properties:
+#          hibernate:
+#            format_sql: true
+#    dialect: org.hibernate.dialect.MySQL9Dialect
